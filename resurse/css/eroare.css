@@ -1,0 +1,25 @@
+		#err-imag{
+			background-image:url("/resurse/imagini/galerie/joe-cercei.jpeg");
+			background-size:100% auto;
+			background-position:center center;
+			background-repeat:no-repeat;
+			width:30%;
+			
+		}
+		
+		#err-imag img{
+			width:100%;
+		}
+		#err-coloane{
+			display:flex;
+			padding-top:1em;
+			padding-left:1em;
+		}
+		
+		#err-coloane section{
+			font-size:2em;
+			padding-left:1em;
+		}
+		#err-coloane h2{
+			font-size:2em;
+		}

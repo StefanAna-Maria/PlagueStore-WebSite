@@ -1,0 +1,114 @@
+/* Grid layout */
+#grid-pagina {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(4, auto);
+    grid-gap: 0.625rem;
+    grid-template-areas:
+        "welcome welcome welcome welcome welcome"
+        "poza poza produse produse produse"
+        "index-intrebari dimensiuni produse produse produse"
+        "anunturi promotii promotii Review-uri Review-uri"
+}
+
+/* Zona 1 - welcome */
+#welcome {
+    grid-area: welcome;
+    background-color: var(--culoare-bkg-grid);
+}
+
+/* Zona 2 - poza */
+#poza {
+    grid-area: poza;
+    background-color: var(--culoare-bkg-grid);
+}
+
+/* Zona 3 - anunturi */
+#anunturi {
+    grid-area: anunturi;
+    background-color: var(--culoare-bkg-grid);
+}
+
+/* Zona 4 - promotii */
+#promotii {
+    grid-area: promotii;
+    background-color: var(--culoare-bkg-grid);
+}
+
+/* Zona 5 - index intrebari */
+#index-intrebari {
+    grid-area: index-intrebari;
+    background-color: var(--culoare-bkg-grid);
+}
+
+/* Zona 6 - dimensiuni */
+#dimensiuni {
+    grid-area: dimensiuni;
+    background-color: var(--culoare-bkg-grid);
+}
+
+/* Zona 7 - review-uri */
+#Review-uri {
+    grid-area: Review-uri;
+    background-color: var(--culoare-bkg-grid);
+}
+
+/* Zona 8 - produse */
+#produse {
+    grid-area: produse;
+    background-color: var(--culoare-bkg-grid);
+}
+
+
+/* Placeholder*/
+section {
+    padding: 20px;
+    border: 1px solid var(--culoare-inchisa);
+    margin: 10px;
+    box-shadow: 0 0 10px var(--culoare-meniu);
+    box-sizing: border-box;
+    border-radius: 5px 5px 5px 5px;
+}
+
+.html{
+    font-size: 18px;
+    font-family: "Madimi One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    
+}
+
+@media (min-width:700px) and (max-width:1000px){
+
+    html{
+        font-size: 15px;
+    }
+
+    #grid-pagina{
+        grid-template-columns: repeat(3,1fr); 
+        grid-gap: 0.4375rem;
+        grid-template-areas:"welcome welcome welcome"
+                            "poza anunturi index-intrebari"
+                            "promotii produse produse"
+                            "dimensiuni produse produse"
+                            "dimensiuni Review-uri Review-uri";
+    }
+
+}
+
+@media screen and (max-width:700px){
+
+    html{
+        font-size: 12px;
+    }
+
+    #grid-pagina{
+        display:block;
+        grid-gap: 0.1875rem;
+    }
+    
+    .container-scroll{
+        overflow-x: scroll;
+    }
+}
+

@@ -1,0 +1,29 @@
+.btn-bootstrap {
+    background-color: lightgreen;
+    border-radius: 20px;
+    border-width: 3px;
+}
+
+.btn-bootstrap-sort {
+    background-color: lightgreen;
+    border-radius: 20px;
+    border-width: 3px;
+}
+
+$body-color: black;
+$form-range-thumb-width: 1.5rem;
+$form-range-thumb-height: $form-range-thumb-width;
+$form-range-thumb-bg: aqua;
+
+$border-radius: 0.2rem;
+$h1-font-size: 2rem;
+$h2-font-size: 1.75rem;
+$h3-font-size: 1.5rem;
+$h4-font-size: 1.25rem;
+$h5-font-size: 1rem;
+$h6-font-size: 0.75rem;
+$body-font-family: Arial, sans-serif;
+$primary:aqua;
+$secondary: #2923DB;
+ 
+@import "../../node_modules/bootstrap/scss/bootstrap.scss";

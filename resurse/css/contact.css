@@ -1,0 +1,20 @@
+.mesaj-c{
+    background:var(--cl-light-t);
+    margin-left:var(--padding-intern);
+    min-height:5rem;
+}
+.mesaj-c h3{
+    background:var(--culoare-roz-inchis);
+    padding-left:1rem;
+}
+.mesaj-c p{
+    padding-left:1rem;
+}
+
+main{
+    padding: 0.5rem;;
+}
+
+.mesaj-c time{
+    font-style: italic;
+}

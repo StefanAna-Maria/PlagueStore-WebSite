@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="ro">
+    <head>
+        <meta name="keywords" content="bijuterii, inele, brățări, cercei, piercinguri, pandantive, medalioane, argint, pietre semiprețioase, onix, ametist, livrare rapidă, retur gratuit, transport gratuit la peste 200 ron, gotic, gotice, handmade, oțel inoxidabil, reglabile, gothic, alternativ, livrare în toată țara, rock, punk, negru, gravură, Killstar, Darkstar, Alchemy Gothic, Demonia, Cleopatra, Living Dead Souls"><!--cuvintele cheie ale paginii; majoritatea motoarelor de căutare ignoră keywords -->
+        <meta name="description" content="La PlagueStore gasesti bijuterii inedite in stil gotic care cu siguranta iti vor ">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+        <link rel="stylesheet" href="/resurse/css/produse.css" type="text/css" />
+        <title>PlagueStore - home</title>
+        <%- include("../fragmente/head") %>     
+        <script type="text/javascript" src="/resurse/js/produse.js"></script>
+        <script type="text/javascript" src="/resurse/js/produse-cos.js"></script>
+    </head>
+    <body class="pagina">
+    <%- include("../fragmente/header") %>
+
+    
+    <main>
+        <div class="container">
+            <!--Search bar-->
+            <div class="row">
+                <div class="col-12">
+                    <label>Nume: <input type="text" class="form-control" id="inp-nume"></label>
+                </div>
+            </div>
+    
+            <!--Descriere (Textarea)-->
+            
+            <div class="form-group">
+                <label for="inp-descriere">Descriere:</label>
+                <textarea class="form-control" id="inp-descriere" rows="3"></textarea>
+            </div>
+            
+    
+            <hr id="hrgradient">
+            <div class="row">
+                <div class="col">
+                    <!--Radio buttons-->
+                    <label>Brand:</label>
+                    <div>
+                        <div class="form-check">
+                            <input class="form-check-input" id="i_rad_KillStar" name="gr_rad_brand" value="KillStar" type="radio"/>
+                            <label class="form-check-label" for="i_rad_KillStar">KillStar</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" id="i_rad_Demonia" name="gr_rad_brand" value="Demonia" type="radio"/>
+                            <label class="form-check-label" for="i_rad_Demonia">Demonia</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" id="i_rad_Winx" name="gr_rad_brand" value="Winx" type="radio"/>
+                            <label class="form-check-label" for="i_rad_Winx">Winx</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" id="i_rad_BlackMist" name="gr_rad_brand" value="BlackMist" type="radio"/>
+                            <label class="form-check-label" for="i_rad_BlackMist">BlackMist</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" id="i_rad_toate" name="gr_rad_brand" value="toate" checked type="radio"/>
+                            <label class="form-check-label" for="i_rad_toate">Toate</label>
+                        </div>
+                    </div>
+
+                    <!--Select multiplu-->
+                    <label>Selectează lunile:
+                        <select class="btn-custom1" id="inp-multi-month" multiple>
+                            <% 
+                            const months = [
+                                "Ianuarie", "Februarie", "Martie", "Aprilie", "Mai", "Iunie", 
+                                "Iulie", "August", "Septembrie", "Octombrie", "Noiembrie", "Decembrie"
+                            ];
+                            for (let month of months) { 
+                            %>
+                                <option value="<%- month.toLowerCase() %>"><%- month %> </option>
+                            <% } %>
+                        </select>
+                    </label>
+                </div>
+                
+                
+                <div class="col">
+                    Sortare după:
+                    <select id="sortKey1" class="form-select">
+                        <option value="pret">Pret</option>
+                        <option value="nume">Nume</option>
+                        <option value="nr_bucati">Număr Bucăți</option>
+                        <option value="brand">Brand</option>
+                    </select>
+                    și
+                    <select id="sortKey2" class="form-select">
+                        <option value="pret">Pret</option>
+                        <option value="nume">Nume</option>
+                        <option value="nr_bucati">Număr Bucăți</option>
+                        <option value="brand">Brand</option>
+                    </select>
+                    <br>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="sortOrder" value="asc" checked>
+                        <label class="form-check-label">Ascendent</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="sortOrder" value="desc">
+                        <label class="form-check-label">Descendent</label>
+                    </div>
+                    <br>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="gravura_custom" value="gravura_custom">
+                        <label class="form-check-label" for="gravura_custom">Gravura Custom?</label>
+                    </div>
+                </div>
+            </div>
+    
+            <hr id="hrgradient">
+            <div class="row">
+                <div class="col">
+                    <label>Pret minim: 0 - 500 <span id="infoRangeMin">(0)</span></label>
+                    <input class="form-range" type="range" id="inp-pret-min" value="0" min="0" max="500">
+                    <label>Pret maxim: 0 - 500 <span id="infoRangeMax">(500)</span></label>
+                    <input class="form-range" type="range" id="inp-pret-max" value="500" min="0" max="500">
+                </div>
+                <div class="col">
+                    <label>Select material:</label>
+                    <select id="inp-materiale" class="form-select">
+                        <option value="toate" selected>Toate</option>
+                        <option value="argint">Argint</option>
+                        <option value="aliaj-zinc">Aliaj Zinc</option>
+                        <option value="otel-inox">Otel Inoxidabil</option>
+                        <option value="onix">Onix</option>
+                        <option value="ametist">Ametist</option>
+                        <option value="topaz">Topaz</option>
+                        <option value="agat">Agat</option>
+                        <option value="rubin">Rubin</option>
+                    </select>
+                </div>
+            </div>
+            
+            <div class="row">
+                <div class="col">
+                    <button class="btn btn-primary" id="filtrare"><i class="fa-solid fa-filter"></i> <span id="ascunde">Filtrează</span></button>
+                    <button class="btn btn-secondary" id="resetare"><i class="fa-solid fa-gear"></i> <span id="ascunde">Resetează</span></button>
+                </div>
+            </div>
+    
+            <p id="p-suma">Apăsați Alt+"c" pentru suma prețurilor produselor afișate.</p>
+    
+            <section id="produse">
+                <h2>Produse</h2>
+                <div class="grid-produse" id="lista-produse" class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+                    <% for (let prod of locals.produse) { %>
+                        <article class="produs col <% if (prod.categorie) { %> <%= prod.categorie.replace(/\s+/g, '') %> <% } %>">
+                            <h3 class="nume">Nume: <a href="/produs/<%- prod.id %>"><span class="val-nume"><%- prod.nume %></span></a></h3>
+                            <div class="info-prod">
+                                <p class="pret">Pret: <span class="val-pret"><%- prod.pret %></span> lei</p>
+                                <p class="nr-bucati">Număr bucăți: <span class="val-nr-bucati"><%- prod.nr_bucati %></span></p>
+                                <p class="brand">Brand: <span class="val-brand"><%- prod.brand %></span></p>
+                                <p class="data_adaugare">Brand: <span class="val-data_adaugare"><%- prod.data_adaugare %></span></p>
+                            </div>
+                            <div class="descriere-imagine">
+                                <figure>
+                                    <a href="/produs/<%-prod.id %>"><img src="/resurse/imagini/produse/<%- prod.imagine %>" style="width:50%;height:auto;" alt="[imagine <%- prod.nume %>]"></a>
+                                </figure>
+                            </div>
+                            <p class="materiale">Material: <span class="val-material"><%- prod.materiale.join(', ') %></span></p>
+                            <p class="gravura_custom">Gravura custom? <%- prod.gravura_custom ? 'Da' : 'Nu' %></p>
+                            <label class="selecteaza-cos">
+                                Selectează:<br/>
+                                <input type="checkbox" class="form-check-input select-cos" value="<%- prod.id %>" autocomplete="off">
+                            </label>
+                        </article>
+                    <% } %>
+                </div>
+            </section>
+            <div id="pagination"></div>
+            <p id="total-products">Număr total de produse: <span id="numar-produse"></span></p>
+        </div>  
+    </main>
+    
+    
+        
+
+    <%- include("../fragmente/footer") %>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    </body>
+</html>

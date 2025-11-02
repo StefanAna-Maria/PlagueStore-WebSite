@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html  lang="ro">
+    
+    <head>
+        <title>PlagueStore</title>
+        <meta name="keywords" content="bijuterii, inele, brățări, cercei, piercinguri, pandantive, medalioane, argint, pietre semiprețioase, onix, ametist, livrare rapidă, retur gratuit, transport gratuit la peste 200 ron, gotic, gotice, handmade, oțel inoxidabil, reglabile, gothic, alternativ, livrare în toată țara, rock, punk, negru, gravură, Killstar, Darkstar, Alchemy Gothic, Demonia, Cleopatra, Living Dead Souls"><!--cuvintele cheie ale paginii; majoritatea motoarelor de căutare ignoră keywords -->
+        <meta name="description" content="La PlagueStore gasesti bijuterii inedite in stil gotic care cu siguranta iti vor ">
+        <link rel="stylesheet" type="text/css" href="/resurse/css/eroare.css">
+        <!--meta name="author" content="Ana-Maria Stefan">-->
+
+        <%- include("../fragmente/head.ejs");  %>
+
+    </head>
+    
+    <body class="pagina">
+        
+        <%- include("../fragmente/header.ejs");  %> 
+
+        <main>
+            <div id="err-coloane">
+			    <div id="err-imag">
+				    <img src="<%- locals.imagine %>" />
+			    </div>
+
+			    <section>
+				    <h2><%- locals.titlu %></h2>
+				    <p><%- locals.text %></p>
+			    </section>
+		    </div>
+        </main>
+    
+        <%- include("../fragmente/footer.ejs");  %> 
+    
+    </body>
+
+</html>

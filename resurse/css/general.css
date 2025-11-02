@@ -1,0 +1,571 @@
+body{
+  /*culori tabel*/
+  --culoare-tab1: yellowgreen;
+  --culoare-tab2: #4EA673;
+  --culoare-meniu:#2C4634;
+  --culoare-inchisa: #496655;
+  --culoare-deschisa: #69AE79;
+  --culoare-hover-ifr:#C0EBCC;
+  --culoare-text: #fff;
+  --culoare-text-selectat: #E63E32;
+  --culoare-bkg-grid: #330e11;
+  /*culori buton*/
+  --culoare-sageata:#999;
+  --culoare-b1: #E13519;
+  --culoare-b2: #471519;
+  --culoare-dash-1:#2C4634;
+  --culoare-bkg-msg:rgb(72, 67, 67);
+  /*spatiere margini pag primcipala*/
+  --spatiere1:90px; /*mare*/
+  --spatiere2:60px; /*mediu*/
+  --spatiere3:30px; /*mic*/
+}
+
+/*ETAPA 2*/
+
+/*Buton:*/
+#link-top {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    opacity: 0.5;
+    transition: opacity 0.3s ease;
+  }
+  
+  #link-top:hover {
+    opacity: 1;
+  }
+  
+  #button-container {
+    display: inline-block;
+    background: linear-gradient(var(--culoare-b2), var(--culoare-b1), var(--culoare-b2));
+    border: 2px dashed var(--culoare-b1);
+    border-radius: 20px;
+    padding: 5px;
+  }
+  
+  #sageata {
+    width: 20px;
+    height: 20px;
+    line-height: 20px;
+    text-align: center;
+    font-size: 1.2em;
+    color: var(--culoare-sageata);
+    /*transition: transform 0.3s ease;*/
+  }
+  
+  #link-top:hover #sageata {
+    transform: rotate(180deg);
+  }
+  
+  #link-top:hover #button-container {
+    transform: rotate(180deg);
+    opacity: 1;
+  }
+  
+  /* Mesaj buton */
+  #link-top:after {
+    content: attr(title);
+    display: none;
+    position: absolute;
+    bottom: calc(100% + 5px);
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 5px 10px;
+    background: var(--culoare-bkg-msg);
+    color: var(--culoare-b1);
+    border-radius: 5px;
+    font-size: 14px;
+  }
+  
+  #link-top:hover:after {
+    display: block;
+  }
+
+/*Tabel:*/
+.tab-dim {
+    max-width: 100%;
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border: 5px double var(--culoare-dash-1); 
+    border-collapse: collapse;
+    transition: border-width 0.75s ease; /* tranziție pentru border-width */
+    font-family: "Metal Mania", system-ui;
+    font-weight: 400;
+    font-style: normal;
+    background-color: var(--culoare-inchisa);
+    color: var(--culoare-b2);
+}
+
+th, td {
+    border: 1px solid var(--culoare-bkg-grid);
+    padding: 8px;
+    text-align: center;
+}
+
+/*stilizare pentru culorile alternate*/
+tbody tr:nth-child(even) td {
+    color: var(--culoare-tab1);
+}
+
+tbody tr:nth-child(odd) td {
+    color: var(--culoare-meniu);
+}
+
+/* efect la hover pe rând */
+tbody tr:hover td {
+    background-color: var(--culoare-tab2); 
+    color: var(--culoare-b1); 
+    border-width: 5px;
+}
+
+
+/* Container pentru secțiunea Review-uri */
+#Review-uri {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Stilizare iframe */
+iframe {
+  border: 4px solid var(--culoare-inchisa);
+  border-radius: 10px;
+  box-sizing: border-box;
+  width: 100%;
+  /*margin-bottom: 20px; */
+}
+
+/* Stilizare link-uri catre iframe */
+.container-iframe{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.container-iframe iframe{
+  width: 100%;
+}
+
+.taburi-iframe{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.taburi-iframe>a{
+  color: var(--culoare-b2);
+  height: 50px;
+  display: block;
+  border: 1px solid var(--culoare-inchisa);
+  background-color: var(--culoare-deschisa);
+  padding: 0.6em;
+  font-size: 12px;
+  text-align: center;
+  border-bottom: 4px solid transparent;
+  /*border-radius: 7px;*/
+  transition: background-color 0.3s ease;
+  text-decoration: none;
+  margin-left: 7px;
+  margin-right: 7px;
+  box-sizing: border-box;
+  width: 100%;
+  box-shadow: 0 0 10px var(--culoare-inchisa); 
+  border-radius: 10px 10px 0 0;
+}
+/*
+.taburi-iframe>a:last-child{
+  border-radius: 10px 10px 0 0;
+  /*margin-bottom: 0;/
+} /*aliniaza */
+
+/*Schimbarea culorii de fundal la hover */
+.taburi-iframe a:hover,
+.taburi-iframe a:focus {
+  background-color: var(--culoare-hover-ifr);
+}
+
+/*icon e-mail*/
+.icon-plic-container {
+  display: inline-block;
+  position: relative;
+  margin-right: 10px; 
+}
+
+.icon-plic-container .fa-solid.fa-envelope {
+  font-size: 24px;
+  color: var(--culoare-inchisa); 
+  transition: color 0.3s ease; /*tranzitie la hover*/
+}
+
+.icon-plic-container:hover .fa-solid.fa-envelope {
+  color: var(--culoare-tab1); 
+}
+
+/* animatie icon e-mail */
+@keyframes send-email {
+  0% {
+    transform: translateX(0) rotate(0deg) scaleY(1);
+    opacity: 1;
+  }
+  25% {
+    transform: translateX(10px) rotate(5deg) scaleY(0.8);
+    opacity: 0.8;
+  }
+  50% {
+    transform: translateX(20px) rotate(10deg) scaleY(0.6);
+    opacity: 0.6;
+  }
+  75% {
+    transform: translateX(30px) rotate(15deg) scaleY(0.4);
+    opacity: 0.4;
+  }
+  100% {
+    transform: translateX(40px) rotate(20deg) scaleY(0.2);
+    opacity: 0.2;
+  }
+}
+
+.icon-plic-container:hover .fa-solid.fa-envelope {
+  animation: send-email 1s ease-in-out forwards; 
+}
+
+/*ETAPA 3*/
+
+/*Stilizare printare*/
+@media print{
+
+  #footer .banner {
+    width: 80%;
+    margin: 0 auto;
+    border: 2px dashed black;
+    text-align: center;
+    position: absolute;
+    left: 100px;
+    top: 3px;
+  }
+
+  img, video, iframe, figcaption,
+  #link-top {
+    display: none !important;
+  }
+
+  #grid-pagina {
+    display: block !important;
+  }
+
+  a {
+    text-decoration: none !important;
+    color: black !important;
+  }
+
+  body.pagina h1 {
+    text-align: center;
+    margin: auto;
+    margin-top: 50%;
+    font-size: 2.5em;
+    text-decoration: underline;
+  }
+
+  nav {
+    display: none;
+  }
+
+  header {
+    page-break-after: always;
+  }
+
+  /*main {
+    page-break-after: always;
+  }*/
+
+  footer {
+    page-break-before: always;
+  }
+
+  /* Watermark */
+  body::after {
+    content: "Stefan Ana-Maria";
+    width: 100px;
+    height: 2cm;
+    border: 2px double var(--culoare-bkg-grid);
+    opacity: 0.65;
+    line-height: 2cm;
+    text-align: center;
+    font-size: 0.8em;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+  }
+
+  @page :left {
+    margin-left: 2.5cm;
+    margin-right: 0.5cm;  
+  }
+
+  @page :right {
+    margin-left: 0.5cm;
+    margin-right: 2.5cm;
+  }
+}
+
+/*Etapa 4*/
+/*link-frumos*/
+a:visited {
+  color: var(--culoare-text);
+}
+
+a[href^=http]:not(.iframe)::before {
+  content: "⮳";
+  font-size: 150%;
+  margin-right: 0.2em;
+}
+
+a[href^=http]:not(.iframe):hover::before {
+  color: var(--culoare-deschisa);
+}
+
+.link-frumos {
+  position: relative;
+}
+
+.link-frumos:visited {
+  color: var(--culoare-b1);
+}
+
+.link-frumos:hover {
+  background-image: radial-gradient(ellipse, var(--culoare-deschisa) 0%, var(--culoare-deschisa) 40%, transparent 80%, transparent 100%);
+  background-size: 0% 0%;
+  background-position: center;
+  transition: 700ms ease;
+  background-size: 100% 100%;
+}
+
+.link-frumos:active {
+  border: 1px solid var(--culoare-sageata);
+}         
+
+
+/*ETAPA 5*/
+/*Stilizare hr*/
+.joe {
+  width: 100%;
+}
+
+.line-joe {
+  height: 4px;
+  background-color: var(--culoare-deschisa);
+  position: relative;
+}
+
+.line-joe::before,
+.line-joe::after {
+  content: "✽";
+  color: var(--culoare-deschisa);
+  position: absolute;
+  font-weight: 900;
+  font-size: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.line-joe::before {
+  left: -20px; 
+}
+
+.line-joe::after {
+  right: -20px; 
+}
+
+/*duotone*/
+#imagine-duotone {
+  position: relative;
+  background-image: url("../imagini/galerie/joe_cercei.jpeg");
+  background-size: cover;
+  width: 500px;
+  height: 500px;
+  filter: brightness(100%) grayscale(0);
+  transition: all 2s linear;
+  border-radius: 30px;
+  box-shadow: 5px 0px 20px black;
+}
+
+#imagine-duotone:after,
+#imagine-duotone:before {
+  content: " ";
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  border-radius: 30px;
+  transition: all 2s linear;
+}
+
+#imagine-duotone:after {
+  /* background-color: rgb(0, 0, 255); */
+  background-color: var(--culoare1);
+  mix-blend-mode: lighten;
+}
+
+#imagine-duotone:before {
+  /* background-color: rgb(205, 0, 255); */
+  background-color: var(--culoare3);
+  mix-blend-mode: darken;
+}
+
+#imagine-duotone:hover:after {
+  background-color: rebeccapurple;
+  mix-blend-mode: lighten;
+}
+#imagine-duotone:hover:before {
+  background-color: lightyellow;
+  mix-blend-mode: darken;
+}
+
+/*text cu reflexie apa*/
+#container {
+  position: relative;
+  display: inline-block;
+  color: var(--cul-h2);
+    
+  font-family: "Metal Mania", system-ui;
+  font-weight: 100;
+  font-style: normal;
+}
+
+#text_ref {
+  font-size: 50px;
+  line-height: 50px;
+  font-weight: bold;
+  position: relative;
+}
+
+#text-reflected {
+  position: absolute;
+  left: 0;
+  top: 100%;
+  transform-origin: 0 0;
+  transform: rotateX(180deg) skew(-45deg) scaleY(0.5) translate(10px, -25px);
+  opacity: 0.75;
+  font-size: 50px;
+  line-height: 50px;
+  font-weight: bold;
+  mask-image: repeating-radial-gradient(circle, black, transparent 15px);
+}
+
+#text_ref:hover + #text-reflected {
+  animation: ripple 0.55s ease-in forwards infinite; /* Activate on hover */
+}
+
+@keyframes ripple {
+  25% {
+    mask-image: repeating-radial-gradient(circle, black, transparent 13px);
+  }
+  50% {
+    mask-image: repeating-radial-gradient(circle, black, transparent 11px);
+  }
+  75% {
+    mask-image: repeating-radial-gradient(circle, black, transparent 9px);
+  }
+  100% {
+    mask-image: repeating-radial-gradient(circle, black, transparent 7px);
+  }
+}
+
+/*-BANNER COOKIES-*/
+#banner {
+  position: fixed;
+  border-radius: 10px;
+  background-color: var(--culoare-inchisa);
+  box-shadow: 0px 0px 0.8rem 0.3rem var(--culoare-bkg-grid);
+  width: 100vw;
+  height: 25vw;
+  bottom: 0;
+  opacity: 0.75;
+  left: 0;
+  padding-top: 6vw;
+  text-align: center;
+  font-size: 2.5vw;
+  transform-origin: bottom center;
+  transform: translateX(-100%);
+  animation: animatie-banner 5s linear forwards;
+}
+
+#banner-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
+
+#banner button {
+  margin-top: 1vw;
+  font-size: 1.5vw;
+  padding: 0.5vw 1vw;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+@keyframes animatie-banner {
+  0% {
+    transform: translateX(-100%);
+    opacity: 0;
+    background-color: var(--culoare-inchisa);
+    border: 2px solid var(--culoare-bkg-grid);
+  }
+  25% {
+    background-color: var(--culoare-deschisa);
+    border: 2px solid var(--culoare-bkg-grid);
+  }
+  50% {
+    background-color: var(--culoare-inchisa);
+    border: 2px solid var(--culoare-deschisa);
+  }
+  75% {
+    background-color: var(--culoare-deschisa);
+    border: 2px solid var(--culoare-inchisa);
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+    background-color: var(--culoare-b2);
+    border: 2px solid var(--culoare-inchisa);
+  }
+}
+@media screen and (max-width: 700px) {
+  #banner {
+    animation: none;
+  }
+}
+@media screen and (max-width: 1000px) {
+  #banner {
+    animation: none;
+  }
+}
+
+/*Carusel  :(*/
+.carousel-caption{
+  font-size: large;
+  background-color: var(--culoare-bkg-grid);
+  border-radius: 20px;
+  margin-left: 20px;
+  font-style: normal;
+  border-color: var(--culoare-dash-1);
+}
+
+.carousel-item{
+  height: 200px;
+  width: 600px;
+}
+
+h5{
+  font-size: 30px;
+  font-family: "Metal Mania", system-ui;
+  font-style: normal;
+  background-color: var(--culoare-deschisa);
+}

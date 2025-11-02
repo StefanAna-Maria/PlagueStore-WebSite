@@ -1,0 +1,115 @@
+body.dark {
+    background-color: black; /* Set the background color to black */
+    color: white; /* Set the text color to white */
+    --culoare21: #940bb0; /* Adjust other colors as needed */
+    --culoare22: #420d4f;
+    --spatiere: 10px;
+    padding-left: var(--spatiere1);
+    padding-right: var(--spatiere1);
+  }
+  
+  /* You might also need to style specific elements */
+  body.dark h1,
+  body.dark p,
+  body.dark ul,
+  body.dark li,
+  body.dark a {
+    color: white; /* Set the text color to white for these elements */
+  }
+  
+  body.dark nav a {
+    color: rgb(255, 255, 255); /* Set link color to purple */
+  }
+  
+  /* Toggle Button Styles */
+  .toggle-container {
+    display: inline-block;
+  }
+  
+  .toggle {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 30px;
+    margin: 10px;
+  }
+  
+  .toggle input[type="checkbox"] {
+    display: none;
+  }
+  
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: .4s;
+    border-radius: 30px;
+  }
+  
+  .slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 2px;
+    bottom: 2px;
+    background-color: white;
+    transition: .4s;
+    border-radius: 50%;
+  }
+  
+  .toggle input:checked + .slider {
+    background-color: var(--culoare-meniu); 
+  }
+  
+  .toggle input:checked + .slider:before {
+    transform: translateX(30px);
+  }
+  
+  /* stil icon-uri*/
+  .icons {
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    width: 100%;
+  }
+  
+  .icons i {
+    color: white; /*culoare iconuri*/
+    margin: 5px;
+    transition: transform 0.4s ease;
+  }
+  
+  .toggle input:checked + .slider .fa-sun {
+    transform: translateY(3px);
+  }
+  
+  .toggle input:checked + .slider .fa-moon {
+    transform: translateY(-3px);
+  }
+  
+  /* Dark Mode Styles */
+  body.dark {
+    background-color: #1f0800; 
+    color: white; 
+  }
+  
+  body.dark a {
+    color: var(--culoare-hover-iframe);
+  }
+  
+  body.dark .toggle input:checked + .slider {
+    background-color: #777;
+  }
+  
+  body.dark .toggle input:checked + .slider:before {
+    background-color: #ccc;
+  }
+  
+  .val-nume a {
+    color: purple;
+  }

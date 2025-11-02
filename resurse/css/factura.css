@@ -1,0 +1,9 @@
+p{
+font-weight:bold;
+text-decoration:underline;
+}
+
+			p::before{
+				content:" ";
+				color: var(--cul-bg-h3);
+			}

@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<!---- Comentariu
+-->
+<html lang="ro">
+    <head>
+        <title>PlagueStore</title>
+        <meta name="keywords" content="bijuterii, inele, brățări, cercei, piercinguri, pandantive, medalioane, argint, pietre semiprețioase, onix, ametist, livrare rapidă, retur gratuit, transport gratuit la peste 200 ron, gotic, gotice, handmade, oțel inoxidabil, reglabile, gothic, alternativ, livrare în toată țara, rock, punk, negru, gravură, Killstar, Darkstar, Alchemy Gothic, Demonia, Cleopatra, Living Dead Souls"><!--cuvintele cheie ale paginii; majoritatea motoarelor de căutare ignoră keywords -->
+        <meta name="description" content="La PlagueStore gasesti bijuterii inedite in stil gotic care cu siguranta iti vor ">
+        <%- include("../fragmente/head.ejs") %>
+    </head>
+
+    <body class = "pagina">
+
+        <%- include("../fragmente/header.ejs") %>
+
+        <!--<div id="container">
+            <div id="text_ref">Un text</div>
+            <div id="text-reflected">Un text</div>
+          </div> -->
+
+        <main>
+            <div id = "grid-pagina"> <!--modif-->
+                <section id="welcome">
+                    <figure>
+                        <picture>
+                            <source class="img" srcset="./resurse/imagini/Img1.jpeg" media="(max-width:700px)" />
+                            <source class="img" srcset="./resurse/imagini/Img2.jpeg" media="(max-width:1200px)" />
+                            <img class="img" src="./resurse/imagini/Img1.jpeg.jpeg" alt=" text" />
+                        </picture>
+                        <figcaption></figcaption>
+                    </figure>
+                    <h2>Bine ati venit</h2>
+
+                    <%- include("../fragmente/locatie.ejs") %>
+
+                    <%- include("../fragmente/useri-online.ejs") %>
+                    <%- include("../fragmente/ora-server-client.ejs") %>
+
+                    <%- include("../fragmente/formular-login.ejs") %>
+
+                    <button type="button" class="btn btn-primary btn-lg">Buton</button>
+                    <p>Ip: <%= locals.ip %></p>
+
+                    <%-include("../fragmente/useri-online.ejs") %>
+
+                    <section id="calendar">
+                        <div class="container-calendar">
+                            <%- include("../fragmente/evenimente.ejs") %>
+                        </div>
+                    </section>
+
+                    <img src="./resurse/imagini/BloodMoon_35.png" alt="imagine blood moon"/>
+                    <p class="intro" style="text-decoration: underline"><span>La PlagueStore gasesti bijuterii inedite in stil gotic a caror calitate cu siguranta iti vor depasi asteptarile! Materialele inedite si serviciile de costumizare iti stau la dispozitie pentru a obtine lookul unic pe care ti-l doresti!</span></p>
+                    <a class="link-frumos"
+                        href="https://www.instagram.com/gothicjewelry?igsh=MWw4dTVrbDk0eTBnMg=="
+                        target="blank">Pagina de bijuterii pe instagram</a>
+                </section>
+               
+                <section id="poza">
+                    <div id="container">
+                        <div id="text_ref">Inele Hand-Crafted</div>
+                        <div id="text-reflected">Inele Hand-Crafted</div>
+                      </div>
+                    <!--  <img class="img" src="./resurse/imagini/BloodMoon_35.png" alt="imagine blood moon"/>  -->
+                    <div id="container-video">
+                        <!-- <img class="plic" src="resurse/imagini/galerie/plic.png" alt="plic"> -->
+                        <div id="centrare-video">
+                            <div id="clip-video">
+                                <div id="stil-video">
+                                    <video controls poster="resurse/video/Inele-barbati.png" width="320" height="240">
+                                        <source src="resurse/video/Video.mp4" type="video/mp4">
+                                        <source src="resurse/video/Video.ogv" type="video/ogv">
+                                        <track default
+                                            src="data:image/png;base64,V0VCVlRUIC0gVmlkZW8KCjAwOjAwLjAwMCAtLT4gMDA6MDEuMDAwIGxpbmU6MTAwJQo8c3BhbiBzdHlsZT0iZm9udC1zdHlsZTpib2xkOyBjb2xvcjp2YXIoLS1jdWxvYXJlLXRleHQpOyI+T2ZlcmltIGJpanV0ZXJpaTwvc3Bhbj4KCjAwOjAxLjAwMCAtLT4gMDA6MDIuMDAwIGxpbmU6MTAwJQo8c3BhbiBzdHlsZT0iZm9udC1zdHlsZTpib2xkOyBjb2xvcjp2YXIoLS1jdWxvYXJlLXRleHQpOyI+Z290aWNlIGNhcmUgc2EgdmEgPC9zcGFuPgoKMDA6MDIuMDAwIC0tPiAwMDowMy41MDAgbGluZToxMDAlCjxzcGFuIHN0eWxlPSJmb250LXN0eWxlOmJvbGQ7IGNvbG9yOnZhcigtLWN1bG9hcmUtdGV4dCk7Ij5yZWZsZWN0ZSBwZXJzb25hbGl0YXRlYS48L3NwYW4+CgowMDowMy41MDAgLS0+IDAwOjA1LjAwMCBsaW5lOjEwMCUKPHNwYW4gc3R5bGU9ImZvbnQtc3R5bGU6Ym9sZDsgY29sb3I6dmFyKC0tY3Vsb2FyZS10ZXh0KTsiPkZpZSBjYSB2YSBwbGFjIHJvY2stdWwsPC9zcGFuPgoKMDA6MDUuMDAwIC0tPiAwMDowNi4wMDAgbGluZToxMDAlCjxzcGFuIHN0eWxlPSJmb250LXN0eWxlOmJvbGQ7IGNvbG9yOnZhcigtLWN1bG9hcmUtdGV4dCk7Ij50YXR1YWplbGUsIHN0aWx1bDwvc3Bhbj4KCjAwOjA2LjAwMCAtLT4gMDA6MDcuNTAwIGxpbmU6MTAwJQo8c3BhbiBzdHlsZT0iZm9udC1zdHlsZTpib2xkOyBjb2xvcjp2YXIoLS1jdWxvYXJlLXRleHQpOyI+cHVuaywgZ290aCwgYmlrZXI8L3NwYW4+CgowMDowNy41MDAgLS0+IDAwOjkuMDAwIGxpbmU6MTAwJQo8c3BhbiBzdHlsZT0iZm9udC1zdHlsZTpib2xkOyBjb2xvcjp2YXIoLS1jdWxvYXJlLXRleHQpOyI+dG90ZW1pYyBzYXUgcmVsaWdpb3M8L3NwYW4+CgowMDo5LjAwMCAtLT4gMDA6MTAuMDAwIGxpbmU6MTAwJQo8c3BhbiBzdHlsZT0iZm9udC1zdHlsZTpib2xkOyBjb2xvcjp2YXIoLS1jdWxvYXJlLXRleHQpOyI+Tm9pIGF2ZW0gYmlqdXRlcmlpPC9zcGFuPgoKMDA6MTAuMDAwIC0tPiAwMDoxMS4wMDAgbGluZToxMDAlCjxzcGFuIHN0eWxlPSJmb250LXN0eWxlOmJvbGQ7IGNvbG9yOnZhcigtLWN1bG9hcmUtdGV4dCk7Ij5nb3RpY2UgcGVudHJ1IHRvYXRhPC9zcGFuPgoKMDA6MTEuMDAwIC0tPiAwMDoxMi4wMDAgbGluZToxMDAlCjxzcGFuIHN0eWxlPSJmb250LXN0eWxlOmJvbGQ7IGNvbG9yOnZhcigtLWN1bG9hcmUtdGV4dCk7Ij5sdW1lYS4gQ3JlZGVtIGNhIHN0YWJpbGlyZWE8L3NwYW4+CgowMDoxMi4wMDAgLS0+IDAwOjEzLjUwMCBsaW5lOjEwMCUKPHNwYW4gc3R5bGU9ImZvbnQtc3R5bGU6Ym9sZDsgY29sb3I6dmFyKC0tY3Vsb2FyZS10ZXh0KTsiPnByZXR1bHVpIG51IGUgc2luZ3VyYSBjYWxlPC9zcGFuPgoKMDA6MTMuNTAwIC0tPiAwMDoxNi4wMDAgbGluZToxMDAlCjxzcGFuIHN0eWxlPSJmb250LXN0eWxlOmJvbGQ7IGNvbG9yOnZhcigtLWN1bG9hcmUtdGV4dCk7Ij5kZSBhIGV2YWx1YSBjYWxpdGF0ZWEgdW5laSBiaWp1dGVyaWkuPC9zcGFuPgoKMDA6MTYuMDAwIC0tPiAwMDoxNy4wMDAgbGluZToxMDAlCjxzcGFuIHN0eWxlPSJmb250LXN0eWxlOmJvbGQ7IGNvbG9yOnZhcigtLWN1bG9hcmUtdGV4dCk7Ij5QZW50cnUgYSBhc2lndXJhPC9zcGFuPgoKMDA6MTcuMDAwIC0tPiAwMDoxOC4wMDAgbGluZToxMDAlCjxzcGFuIHN0eWxlPSJmb250LXN0eWxlOmJvbGQ7IGNvbG9yOnZhcigtLWN1bG9hcmUtdGV4dCk7Ij5jZWEgbWFpIGJ1bmE8L3NwYW4+CgowMDoxOC4wMDAgLS0+IDAwOjE5LjAwMCBsaW5lOjEwMCUKPHNwYW4gc3R5bGU9ImZvbnQtc3R5bGU6Ym9sZDsgY29sb3I6dmFyKC0tY3Vsb2FyZS10ZXh0KTsiPmNhbGl0YXRlIHNpIGNlbGUgbWFpPC9zcGFuPgoKMDA6MTkuMDAwIC0tPiAwMDoyMC4wMDAgbGluZToxMDAlCjxzcGFuIHN0eWxlPSJmb250LXN0eWxlOmJvbGQ7IGNvbG9yOnZhcigtLWN1bG9hcmUtdGV4dCk7Ij5pbmVkaXRlIGRlc2lnbi11cmksPC9zcGFuPgoKMDA6MjAuMDAwIC0tPiAwMDoyMS4wMDAgbGluZToxMDAlCjxzcGFuIHN0eWxlPSJmb250LXN0eWxlOmJvbGQ7IGNvbG9yOnZhcigtLWN1bG9hcmUtdGV4dCk7Ij5wcm9kdXNlbGUgbm9hc3RyZSBzdW50IGNyZWF0ZTwvc3Bhbj4KCjAwOjIxLjAwMCAtLT4gMDA6MjIuNTAwIGxpbmU6MTAwJQo8c3BhbiBzdHlsZT0iZm9udC1zdHlsZTpib2xkOyBjb2xvcjp2YXIoLS1jdWxvYXJlLXRleHQpOyI+bWFudWFsIGRlIGNhdHJlIGV4cGVydGkuPC9zcGFuPgoKCg=="
+                                            kind="captions" srclang="ro" label="romana">
+                                        <track
+                                            src="data:image/png;base64,V0VCVlRUIC0gVmlkZW8NCg0KMDA6MDAuMDAwIC0tPiAwMDowMS4wMDAgbGluZToxMDAlDQo8c3BhbiBzdHlsZT0iZm9udC1zdHlsZTpib2xkOyBjb2xvcjp2YXIoLS1jdWxvYXJlLXRleHQpOyI+d2Ugb2ZmZXIgZGlzdGluY3RpdmU8L3NwYW4+DQoNCjAwOjAxLjAwMCAtLT4gMDA6MDIuMDAwIGxpbmU6MTAwJQ0KPHNwYW4gc3R5bGU9ImZvbnQtc3R5bGU6Ym9sZDsgY29sb3I6dmFyKC0tY3Vsb2FyZS10ZXh0KTsiPmdvdGhpYyBqZXdlbHJ5IHRoYXQgcmVmbGVjdHM8L3NwYW4+DQoNCjAwOjAyLjAwMCAtLT4gMDA6MDMuNTAwIGxpbmU6MTAwJQ0KPHNwYW4gc3R5bGU9ImZvbnQtc3R5bGU6Ym9sZDsgY29sb3I6dmFyKC0tY3Vsb2FyZS10ZXh0KTsiPnlvdXIgcGVyc29uYWxpdHk8L3NwYW4+DQoNCjAwOjAzLjUwMCAtLT4gMDA6MDUuMDAwIGxpbmU6MTAwJQ0KPHNwYW4gc3R5bGU9ImZvbnQtc3R5bGU6Ym9sZDsgY29sb3I6dmFyKC0tY3Vsb2FyZS10ZXh0KTsiPndoZXRoZXIgeW91IGxpa2Ugcm9jaywgZmFzaGlvbiw8L3NwYW4+DQoNCjAwOjA1LjAwMCAtLT4gMDA6MDYuMDAwIGxpbmU6MTAwJQ0KPHNwYW4gc3R5bGU9ImZvbnQtc3R5bGU6Ym9sZDsgY29sb3I6dmFyKC0tY3Vsb2FyZS10ZXh0KTsiPnRhdHRvb3MsIHB1bmssPC9zcGFuPg0KDQowMDowNi4wMDAgLS0+IDAwOjA3LjUwMCBsaW5lOjEwMCUNCjxzcGFuIHN0eWxlPSJmb250LXN0eWxlOmJvbGQ7IGNvbG9yOnZhcigtLWN1bG9hcmUtdGV4dCk7Ij5nb3RoLCBiaWtlciBzdHlsZTwvc3Bhbj4NCg0KMDA6MDcuNTAwIC0tPiAwMDo5LjAwMCBsaW5lOjEwMCUNCjxzcGFuIHN0eWxlPSJmb250LXN0eWxlOmJvbGQ7IGNvbG9yOnZhcigtLWN1bG9hcmUtdGV4dCk7Ij50b3RlbWljIG9yIHJlbGlnaW91czwvc3Bhbj4NCg0KMDA6OS4wMDAgLS0+IDAwOjEwLjAwMCBsaW5lOjEwMCUNCjxzcGFuIHN0eWxlPSJmb250LXN0eWxlOmJvbGQ7IGNvbG9yOnZhcigtLWN1bG9hcmUtdGV4dCk7Ij53ZSBoYXZlIGdvdGhpYzwvc3Bhbj4NCg0KMDA6MTAuMDAwIC0tPiAwMDoxMS4wMDAgbGluZToxMDAlDQo8c3BhbiBzdHlsZT0iZm9udC1zdHlsZTpib2xkOyBjb2xvcjp2YXIoLS1jdWxvYXJlLXRleHQpOyI+amV3ZWxyeSBmb3IgZXZlcnlvbmU8L3NwYW4+DQoNCjAwOjExLjAwMCAtLT4gMDA6MTIuMDAwIGxpbmU6MTAwJQ0KPHNwYW4gc3R5bGU9ImZvbnQtc3R5bGU6Ym9sZDsgY29sb3I6dmFyKC0tY3Vsb2FyZS10ZXh0KTsiPndlIGJlbGlldmUgdGhhdDwvc3Bhbj4NCg0KMDA6MTIuMDAwIC0tPiAwMDoxMy41MDAgbGluZToxMDAlDQo8c3BhbiBzdHlsZT0iZm9udC1zdHlsZTpib2xkOyBjb2xvcjp2YXIoLS1jdWxvYXJlLXRleHQpOyI+cHJpY2luZyBpc24ndCB0aGUgc29sZTwvc3Bhbj4NCg0KMDA6MTMuNTAwIC0tPiAwMDoxNi4wMDAgbGluZToxMDAlDQo8c3BhbiBzdHlsZT0iZm9udC1zdHlsZTpib2xkOyBjb2xvcjp2YXIoLS1jdWxvYXJlLXRleHQpOyI+d2F5IHRvIGdhdWdlIGEgcGllY2Ugb2YgamV3ZWxyeSdzIHF1YWxpdHk8L3NwYW4+DQoNCjAwOjE2LjAwMCAtLT4gMDA6MTcuMDAwIGxpbmU6MTAwJQ0KPHNwYW4gc3R5bGU9ImZvbnQtc3R5bGU6Ym9sZDsgY29sb3I6dmFyKC0tY3Vsb2FyZS10ZXh0KTsiPnRvIGFzc3VyZSB0aGU8L3NwYW4+DQoNCjAwOjE3LjAwMCAtLT4gMDA6MTguMDAwIGxpbmU6MTAwJQ0KPHNwYW4gc3R5bGU9ImZvbnQtc3R5bGU6Ym9sZDsgY29sb3I6dmFyKC0tY3Vsb2FyZS10ZXh0KTsiPnRoZSBmaW5lc3QgcXVhbGl0eTwvc3Bhbj4NCg0KMDA6MTguMDAwIC0tPiAwMDoxOS4wMDAgbGluZToxMDAlDQo8c3BhbiBzdHlsZT0iZm9udC1zdHlsZTpib2xkOyBjb2xvcjp2YXIoLS1jdWxvYXJlLXRleHQpOyI+YW5kIG1vc3Q8L3NwYW4+DQoNCjAwOjE5LjAwMCAtLT4gMDA6MjAuMDAwIGxpbmU6MTAwJQ0KPHNwYW4gc3R5bGU9ImZvbnQtc3R5bGU6Ym9sZDsgY29sb3I6dmFyKC0tY3Vsb2FyZS10ZXh0KTsiPmRpc3RpbmN0aXZlIGRlc2lnbnM8L3NwYW4+DQoNCjAwOjIwLjAwMCAtLT4gMDA6MjEuMDAwIGxpbmU6MTAwJQ0KPHNwYW4gc3R5bGU9ImZvbnQtc3R5bGU6Ym9sZDsgY29sb3I6dmFyKC0tY3Vsb2FyZS10ZXh0KTsiPmFsbCBvZiB0aGUgcHJvZHVjdHMgYXJlPC9zcGFuPg0KDQowMDoyMS4wMDAgLS0+IDAwOjIyLjUwMCBsaW5lOjEwMCUNCjxzcGFuIHN0eWxlPSJmb250LXN0eWxlOmJvbGQ7IGNvbG9yOnZhcigtLWN1bG9hcmUtdGV4dCk7Ij5oYW5kY3JhZnRlZCBieSBleHBlcnQgYXJ0aXNhbnM8L3NwYW4+DQoNCg=="
+                                            kind="captions" srclang="en" label="engleza">
+                                    </video>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+    
+                <section id="index-intrebari">
+                <h2>Intrebari frecvente</h2>
+                <details>
+                    <summary>Returul este gratuit?</summary>
+                    <p>Da, returul se face gratuit prin completarea formularului in termen de 30 de zile de la ridicarea comenzii.</p>
+                </details>
+                <details>
+                    <summary>Pietrele sunt reale sau imitatii?</summary>
+                    <p>Toate pietrele semipretioase din selectia noastra sunt originale.</p>
+                </details>
+                <details>
+                    <summary>Puteti recomanda un mod bun pentru intretinerea argintului?</summary>
+                    <p>Desigur, pentru informatii privind intretinerea bijuteriilor accesati: 
+                        <a href="https://www.anyoli.ro/blog/cum-se-curata-bijuteriile-din-argint-modalitati-eficiente-de-ingrijire-a-argintului" target="blank">Google</a></p>
+                </details>
+                </section>
+    
+                <section id="anunturi">
+                    <h2>Anunțuri</h2> 
+                    <p><time datetime="2022-01-05">5 ianuarie 2022</time> <strong>No more Covid!!!!</strong></p>
+                    <p><time datetime="2020-07-05">19 august 2020</time> PlagueStore are o noua colaborare cu KillStar!</p>
+
+                    <p><time datetime="2020-09-15">03 octombrie 2020</time> Acum ai posibilitatea de a-ti comanda inele cu piatra la alegere!</p>
+                    <p><time datetime="2021-02-11">27 ianuarie 2021</time> In luna februarie toate comenzile vor avea un delay intre 3 si 5 zile.</p>
+                </section>
+    
+                <section id="promotii">
+                    <h2>Promotii</h2>
+                    <section>
+                        <h3>Super oferta de Halloween</h3>
+                        <p class="promo" style="text-decoration: underline">Numai de Halloween beneficiezi de 40% reducere la toate produsele din gama "SpookySeason"!</p>
+                    </section>
+    
+                    <section>
+                        <h3>Oferte de cuplu</h3>
+                        <p class="promo" style="text-decoration: underline">La PlagueStore noi va oferim ocazia de a forma o conexiune puternica cu partenerul/a dumneavoastra cu 30% reducere la comanda a 2 produse indentice. Nu ratati sansa de a achizitiona un simpol al iubirii voastre din partea noastra :D </p>
+                    </section>
+                </section>
+    
+                <section id="dimensiuni"> 
+                  <div class="container-scroll">
+                    <table id="tab-dim">
+                        <thead>
+                            <tr>
+                                <th rowspan="2">Mărime EU</th>
+                                <th colspan="2">Dimensiuni</th>
+                                <th rowspan="2">Mărime US</th>
+                            </tr>
+                            <tr>
+                                <th>Circumferință</th>
+                                <th>Diametru interior</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>48</td>
+                                <td>48 mm</td>
+                                <td>15.3 mm</td>
+                                <td>4.5</td>
+                            </tr>
+                            <tr>
+                                <td>49</td>
+                                <td>49 mm</td>
+                                <td>15.6 mm</td>
+                                <td>5</td>
+                            </tr>
+                            <tr>
+                                <td>50</td>
+                                <td>50 mm</td>
+                                <td>15.9 mm</td>
+                                <td>5.5</td>
+                            </tr>
+                            <tr>
+                                <td>51</td>
+                                <td>51 mm</td>
+                                <td>16.2 mm</td>
+                                <td>6</td>
+                            </tr>
+                            <tr>
+                                <td>52</td>
+                                <td>52 mm</td>
+                                <td>16.6 mm</td>
+                                <td>6</td>
+                            </tr>
+                            <tr>
+                                <td>53</td>
+                                <td>53 mm</td>
+                                <td>16.9 mm</td>
+                                <td>6.5</td>
+                            </tr>
+                            <tr>
+                                <td>54</td>
+                                <td>54 mm</td>
+                                <td>17.2 mm</td>
+                                <td>7</td>
+                            </tr>
+                            <tr>
+                                <td>55</td>
+                                <td>55 mm</td>
+                                <td>17.5 mm</td>
+                                <td>7</td>
+                            </tr>
+                            <tr>
+                                <td>56</td>
+                                <td>56 mm</td>
+                                <td>17.8 mm</td>
+                                <td>7.5</td>
+                            </tr>
+                            <tr>
+                                <td>57</td>
+                                <td>57 mm</td>
+                                <td>18.1 mm</td>
+                                <td>8</td>
+                            </tr>
+                            <tr>
+                                <td>58</td>
+                                <td>58 mm</td>
+                                <td>18.5 mm</td>
+                                <td>8.5</td>
+                            </tr>
+                            <tr>
+                                <td>59</td>
+                                <td>59 mm</td>
+                                <td>18.8 mm</td>
+                                <td>9</td>
+                            </tr>
+                            <tr>
+                                <td>60</td>
+                                <td>60 mm</td>
+                                <td>19.1 mm</td>
+                                <td>9</td>
+                            </tr>
+                            <tr>
+                                <td>61</td>
+                                <td>61 mm</td>
+                                <td>19.4 mm</td>
+                                <td>9.5</td>
+                            </tr>
+                            <tr>
+                                <td>62</td>
+                                <td>62 mm</td>
+                                <td>19.7 mm</td>
+                                <td>10</td>
+                            </tr>
+                        </tbody>
+                        <tfoot>
+                            <tr>
+                                <td colspan="4">Măsurile sunt specifice produselor site-ului nostru!</td>
+                            </tr>
+                        </tfoot>
+                    </table>
+                  </div>
+                </section>
+
+                <section id="produse">
+                    <h2>Produsele noastre</h2>
+                    <p>Vă oferim o gama larga de bijuterii gotice inedite </p>
+                    <section>
+                        <h3>Inele</h3>
+                        <p></p>
+                        <p>Modele noi cu:</p>
+                        <ul>
+                            <li>cranii</li>
+                            <li>pietre semipretioase</li>
+                            <li>gravura</li>
+                            <li>sarpe</li>
+                        </ul>
+                    </section>
+                    <section>
+                        <h3>Bratari</h3>
+                        <p>Ai libertatea de a alege combinatia ta preferata din:</p>
+                        <ul>
+                            <li>onix</li>
+                            <li>agat</li>
+                            <li>ametist</li>
+                            <li>emerald</li>
+                            <li>piatra lunii</li>
+                        </ul>
+                    </section>
+                    
+                    <section>
+                        <h3>Pandantive</h3>
+                        <p>Va oferim pandantive unicate tip:</p>
+                        <ul>
+                            <li>dragon</li>
+                            <li>sarpe</li>
+                            <li>luna</li>
+                            <li>cruce</li>
+                            <li>cranii</li>
+                        </ul>
+                        <h3>Piercinguri</h3>
+                        <p>Gama noastra de piercinguri cuprinde:</p>
+                        <ul>
+                            <li>pierce nas</li>
+                            <li>piercing-ri ureche cu model</li>
+                            <li>pierce buric cu pietricica</li>
+                            <li>pierce gropite</li>
+                        </ul>
+                        <h3>Cercei</h3>
+                        <p>Numai la noi:</p>
+                        <ul>
+                            <li>pentagrama</li>
+                            <li>semiluna</li>
+                            <li>sageata</li>
+                            <li>aripi de liliac</li>
+                        </ul>
+                    </section>
+                </section>
+    
+                <section id="Review-uri">
+                    <h2>Feedback-ul clientilor nostri</h2>
+                <div class="container-iframe">
+                    <div class="taburi-iframe">
+                        <a class="iframe-link" href="https://youtu.be/p1nd9Izu1ek?si=9pvKLOt5mxum2Xhh" target="ifr-video">Review-Promotia de Halloween</a>
+                        <a class="iframe-link" href="https://youtu.be/U3h6BsMylb4?si=-Z3gqlpCY22PTjPC" target="ifr-video">Review-Noua colectie</a>
+                        <a class="iframe-link" href="https://youtu.be/U3h6BsMylb4?si=-Z3gqlpCY22PTjPC" target="ifr-video">Review-PlagueSttore</a>
+                    </div>
+                    <iframe class="iframe-video" width="560" height="315" src="https://www.youtube.com/embed/NBuVxT4hByc?si=hnenXtSfsCzW_S5L" 
+                    title="YouTube video player" frameborder="0" 
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                </div>
+                </section>            
+            </div>
+            <section>
+            <div id="carouselExampleDark" class="carousel carousel-dark slide">
+                <div class="carousel-indicators">
+                  <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                  <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                  <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                  <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="3" aria-label="Slide 4"></button>
+                  <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="4" aria-label="Slide 5"></button>
+                </div>
+                <div class="carousel-inner">
+                  <div class="carousel-item active" data-bs-interval="10000">
+                    <img src="/resurse/imagini/produse/Inel-craniu-bivol.jpeg" class="d-block">
+                    <div class="carousel-caption d-none d-md-block">
+                      <h5>Inel WildDead</h5>
+                      <p>Inel cu sculptura in forma de craniu de bivol.</p>
+                      <p>Materiale: otel inoxidabil, aliaj de zinc.</p>
+                    </div>
+                  </div>
+                  <div class="carousel-item" data-bs-interval="2000">
+                    <img src="/resurse/imagini/produse/medalion-batWings.jpg" class="d-block">
+                    <div class="carousel-caption d-none d-md-block">
+                      <h5>Medalion BatWings</h5>
+                      <p>Medalion gotic cu rubin si rama in forma de aripi de liliac</p>
+                      <p>Materiale: rubin, argint.</p>
+                    </div>
+                  </div>
+                  <div class="carousel-item">
+                    <img src="/resurse/imagini/produse/cercei-semiluna.jpeg" class="d-block">
+                    <div class="carousel-caption d-none d-md-block">
+                      <h5>Cercei Semiluna</h5>
+                      <p>Cercei lungi in forma de semiluna cu piatra.</p>
+                      <p>Materiale: ametist, argint.</p>
+                    </div>
+                  </div>
+                  <div class="carousel-item">
+                    <img src="/resurse/imagini/produse/BirdSkull.jpeg" class="d-block">
+                    <div class="carousel-caption d-none d-md-block">
+                      <h5>Inel BirdSkull</h5>
+                      <p>Inel cu craniu de corb reglabil.</p>
+                      <p>Materiale: otel inoxidabil, aliaj de zinc.</p>
+                    </div>
+                  </div>
+                  <div class="carousel-item">
+                    <img src="/resurse/imagini/produse/luckystones.jpeg" class="d-block">
+                    <div class="carousel-caption d-none d-md-block">
+                      <h5>Brățărică LuckyStones</h5>
+                      <p>Bratara din pietre semipretioase.</p>
+                      <p>Materiale: ametist, topaz, agat, argint.</p>
+                    </div>
+                  </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Next</span>
+                </button>
+              </div>
+              </section>
+              <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+              <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+
+            <section id="galerie-statica">
+                <h2>Galerie</h2>
+                <div id="grid-galerie">
+                    <% 
+                    var d = new Date();
+                    var ora_curenta = d.getHours() * 60 + d.getMinutes(); // Convertim ora curentă în minute
+            
+                    function inIntervalOrar(interval, ora_curenta) {
+                        var [start, end] = interval.split("-");
+                        var [startHour, startMinute] = start.split(":").map(Number);
+                        var [endHour, endMinute] = end.split(":").map(Number);
+            
+                        var startTime = startHour * 60 + startMinute;
+                        var endTime = endHour * 60 + endMinute;
+            
+                        return ora_curenta >= startTime && ora_curenta <= endTime;
+                    }
+            
+                    for (let imag of locals.imagini) { 
+                        if (imag?.timp && inIntervalOrar(imag.timp, ora_curenta)) { 
+                    %>
+                        <figure>
+                            <picture>
+                                <source srcset="<%= imag.fisier_mediu %>" media="(max-width:1200px)" />
+                                <img src="<%= imag.fisier %>" alt="<%= imag.titlu %>">
+                            </picture>
+                            <figcaption>
+                                <strong><%= imag.titlu %></strong><br>
+                                
+                            </figcaption>
+                        </figure>
+                    <% 
+                        } 
+                    } 
+                    %>
+                </div>
+            </section>
+
+        </main>
+        <p>
+        <div class="joe">
+            <div class="line-joe"></div>
+          </div>
+
+        </p>
+        
+        <p>
+          <h2>Cercei Joe Biden</h3>
+          <div id="imagine-duotone"></div>
+        </p>
+        <%- include("../fragmente/footer.ejs") %>
+
+    </body>
+
+</html>
+

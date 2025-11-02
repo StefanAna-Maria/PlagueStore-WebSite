@@ -1,0 +1,29 @@
+#creare-prajitura{
+    margin-left:3rem;
+}
+
+.titlu-grup-ingrediente{
+    text-transform: capitalize;
+    font-size:2em;
+    font-weight: bold;
+}
+
+.panouIngredient{
+    margin-bottom:0.5rem;
+}
+
+#creare-prajitura button{
+    width:7rem;
+    text-align: center;
+}
+.nume-ingredient{
+    font-weight:bold;
+    width:7rem;
+    display: inline-block;
+    text-transform: capitalize;
+}
+
+
+.test{
+    background-color: yellow;
+}

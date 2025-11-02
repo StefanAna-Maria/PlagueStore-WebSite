@@ -1,0 +1,138 @@
+body{
+    --cul_bg_pag: #471519;
+    --cul-h2: #c5b0b0;
+    --cul-bg-h3: #C0EBCC;
+    --cul-bg-h2: var(--culoare-meniu);
+    /*--cul-bg-h2:#2C4634;*/
+    --cul-h3: #E13519;
+}
+
+.c1{
+    background-color: var(--culoare-bkg-grid);
+    border-radius: 5px 5px 5px 5px;
+    box-shadow: 0 0 10px var(--culoare-b1);
+    box-sizing: border-box;
+    width: 100%;
+}
+
+p{
+    color: var(--cul-h2);
+    border: 2px solid var(--culoare1);   
+}
+
+h2{
+    padding-left: 10px;
+    background-color: var(--cul-bg-h2);
+    color: var(--cul-h2);
+    font-family: "Metal Mania", system-ui;
+    font-weight: 400;
+    font-style: normal;
+}
+  
+h1{
+    padding-left: 15px;
+    color: var(--culoare-b1);
+    font-family: "Metal Mania", system-ui;
+    font-weight: 400;
+    font-style: normal;
+}
+
+h3{
+    padding-left: 10px;
+    background-color: var(--cul-h3);
+    font-family: "Metal Mania", system-ui;
+    font-weight: 400;
+    font-style: normal;
+    color: var(--culoare-deschisa);
+}
+
+.pagina{
+    background-color: var(--cul_bg_pag);
+    color: var(--cul-h2);
+}
+
+#index-intrebari details{
+    color: var(--culoare-deschisa);
+}
+
+.promo{
+    color: var(--cul-bg-h3);
+}
+
+#produse ul{
+    color: var(--cul-bg-h3);
+}
+
+#footer{
+    padding-left: 15px;
+    padding-top: 5px;
+    padding-bottom: 2px;
+    background-color: var(--culoare-bkg-grid);
+    border-radius: 10px 10px 10px 10px;
+    box-shadow: 0 0 10px var(--culoare-b1);
+    box-sizing: border-box;
+    width: 100%;
+}
+
+#footer a{
+    color: var(--cul-bg-h3);
+}
+
+#footer address{
+    color: var(--cul-h2);
+}
+
+/*Font:*/
+.metal-mania-regular {
+    font-family: "Metal Mania", system-ui;
+    font-weight: 400;
+    font-style: normal;
+}
+
+/*padding pagina*/
+@media screen and (min-width:1000px){
+
+    .pagina{
+        padding-left: var(--spatiere1);
+        padding-right: var(--spatiere1);
+    }
+
+}
+@media (min-width:700px) and (max-width:1000px){
+
+    .pagina{
+        padding-left: var(--spatiere2);
+        padding-right: var(--spatiere2);
+    }
+}
+
+@media screen and (max-width:700px){
+
+    .pagina{
+        padding-left: var(--spatiere3);
+        padding-right: var(--spatiere3);
+    }
+}
+
+/*reglare dimensiune img si video*/
+.img /*, .iframe-video*/ {
+    max-width: 100%; 
+    height: auto; /* menține rap de aspect */
+    width: auto\9; 
+}
+
+@media screen and (min-width: 700px) {
+    .img /*, .iframe-video*/ {
+        max-width: 80%; 
+        min-width: 300px; 
+    }
+}
+
+@media screen and (min-width: 1000px) {
+    .img /*, .iframe-video*/{
+        max-width: 60%; 
+        min-width: 400px; 
+    }
+}
+
+

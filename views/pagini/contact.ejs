@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ro">
+	<head>
+		<title>Contact</title>
+		<%- include("../fragmente/head") %>
+		<link rel="stylesheet" type="text/css" href="/resurse/css/contact.css" />
+	</head>
+	<body class="pagina">
+		<header>
+			<%- include("../fragmente/header") %>
+		</header>
+		<main>
+			
+			<h1>Trimite un mesaj către site</h1>
+			<p>Mesajele nu sunt moderate (n-avem timp de așa ceva - noi facem prăjituri!), 
+                așa că, pentru sănătatea dumneavoastră mentală vă sfătuim călduros să nu citiți ce e scris sub formularul de contact. 
+                Iar dacă nu ne-ați ascultat sfatul și ați citit, vă reamintim că remediul cel mai bun contra stresului și PTSD-ului, sunt prăjiturile.
+            Vă mai așteptăm! :)</p>
+
+            <form method="post" action="/contact">
+                <label>Mesajul dumneavoastră:<br/>
+                    <textarea cols="30" rows="5" name="mesaj" placeholder="Scrieți tot ce aveți pe suflet!"></textarea>
+                </label><br/>
+                <input type="submit" value="Trimite mesajul!">
+            </form>
+			<section>
+				<h2>Mesaje:</h2>
+				<% if (locals.mesaje) {
+					var mesajeSort=locals.mesaje.sort(function(a,b) {return (new Date(b.attributes.data)).getTime()-(new Date(a.attributes.data)).getTime()})
+					for (let msg of mesajeSort) { 
+						let dt=new Date(msg.attributes.data);
+						%>
+						<article class="mesaj-c">
+							<h3><span class="username"><%= msg.attributes.username%></span> spune:</h3>
+							<p><%= msg.elements[0].text %></p>
+							<p><small><time datetime="<%= dt.getUTCDate() %>"><%= dt.toLocaleString('ro-RO', {
+														weekday: 'long', 
+														day: 'numeric',
+														year: 'numeric', 
+														month: 'long', 
+														hour: 'numeric',
+														minute: 'numeric', 
+														second: 'numeric',
+													}) %></time></small>
+							</p>
+						</article>
+					<% } %>
+				<% } %>
+			</section>
+		</main>
+		
+		<%- include("../fragmente/footer") %>
+		
+	</body>
+</html>

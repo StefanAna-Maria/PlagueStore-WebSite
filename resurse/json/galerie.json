@@ -1,0 +1,119 @@
+{
+	"cale_galerie":"resurse/imagini/galerie",
+	"imagini": [
+		{
+			"fisier":"medalion-batwings.jpg",
+			"titlu":"Medalion Bat Wings",
+			"descriere":"momentan fara",
+			"timp":"14:00-16:00"
+		},
+		{
+			"fisier":"Medalion.jpg",
+			"titlu":"Medalion Molie",
+			"descriere":"momentan fara",
+			"timp":"11:00-16:00"
+		},
+		{
+			"fisier":"matched-coffin-rings.jpg",
+			"titlu":"Inele matchy cu sicriu",
+			"descriere":"momentan fara",
+			"timp":"11:00-16:00"
+		},
+		{
+			"fisier":"inel-cruce.jpg",
+			"titlu":"Inel Cruce",
+			"descriere":"momentan fara",
+			"timp":"11:00-16:00"
+		},
+		{
+			"fisier":"medalion-craniu.jpg",
+			"titlu":"Medalion Broken Skull",
+			"descriere":"momentan fara",
+			"timp":"11:00-16:00"
+		},
+		{
+			"fisier":"medalion-cruce.jpg",
+			"titlu":"Medalion Cruce",
+			"descriere":"momentan fara",
+			"timp":"11:00-16:00"
+		},
+		{
+			"fisier":"piercing-nas.jpg",
+			"titlu":"Piercing Semiluna",
+			"descriere":"momentan fara",
+			"timp":"11:00-16:00"
+		},
+		{
+			"fisier":"piercing-buric.jpg",
+			"titlu":"Piercing Bloody Heart",
+			"descriere":"momentan fara",
+			"timp":"11:00-16:00"
+		},
+		{
+			"fisier":"pierceing.jpg",
+			"titlu":"Piercing Fairytale",
+			"descriere":"momentan fara",
+			"timp":"11:00-16:00"
+		},
+		{
+			"fisier":"medalion-rubin.jpg",
+			"titlu":"Medalion Big Heart",
+			"descriere":"momentan fara",
+			"timp": "14:00-24:00"
+		},
+		{
+			"fisier":"pocket-watch.jpg",
+			"titlu":"Medalion Ceas de buzunar",
+			"descriere":"momentan fara",
+			"timp": "16:00-24:00"
+		},
+		{
+			"fisier":"cercel-cruce.jpg",
+			"titlu":"Cercel Cruce Strapunzatoare",
+			"descriere":"momentan fara",
+			"timp": "14:00-24:00"
+		},
+		{
+			"fisier":"cercel-dragon-wing.jpg",
+			"titlu":"Cercel Dragon's Wing",
+			"descriere":"momentan fara",
+			"timp": "14:00-24:00"
+		},
+		{
+			"fisier":"Inel-craniu-bivol.jpg",
+			"titlu":"Inel Wild Skull",
+			"descriere":"momentan fara",
+			"timp": "14:00-24:00"
+		},
+		{
+			"fisier":"cercei-semiluna.jpg",
+			"titlu":"Cercei Bewitching",
+			"descriere":"momentan fara",
+			"timp": "14:00-24:00"
+		},
+		{
+			"fisier":"cercei-batwings.jpg",
+			"titlu":"Cercei Bat Wings",
+			"descriere":"momentan fara",
+			"timp": "14:00-24:00"
+		},
+		{
+			"fisier":"bratara-inima-rubin.jpg",
+			"titlu":"Bratara Sick Love",
+			"descriere":"momentan fara",
+			"timp": "11:00-24:00"
+		},
+		{
+			"fisier":"bratara_onix.jpg",
+			"titlu":"Bratara Bad Omen",
+			"descriere":"momentan fara",
+			"timp": "11:00-24:00"
+		},
+		{
+			"fisier":"celtic-ring.jpg",
+			"titlu":"Inel celtic",
+			"descriere":"momentan fara",
+			"timp": "14:00-24:00"
+		}
+	]
+}

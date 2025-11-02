@@ -1,0 +1,69 @@
+::cue {
+    background: var(--culoare-b2);
+    color: var(--culoare-text);
+    font-size: 1rem;
+    /*font-style: bold;*/
+  }
+  
+  @media screen and (max-width: 1000px) {
+    ::cue {
+      font-size: 0.8rem;
+    }
+  }
+  #container-video {
+    background-size: cover;
+    width: 100%;
+    /*max-width: 550px;*/
+    /*max-height: 500px;*/
+    position: relative;
+    margin: 0 auto;
+  }
+  
+  #container-video img {
+    width: 100%;
+    max-height: 300px;
+    text-align: center;
+    top: 30px;
+    transition: all 0.2s linear;
+    transform: rotateX(70deg);
+    position: relative;
+  }
+  
+  @media screen and (min-width: 1000px) {
+    #container-video img {
+      top: 100px;
+    }
+  }
+  #clip-video {
+    width: 100%;
+    /*--raza-bord: 3rem;*/
+    overflow: hidden;
+    padding: 0;
+    margin: 0;
+    line-height: 0px;
+  }
+  
+  #stil-video {
+    overflow: hidden;
+    border-radius: 15px;
+    position: relative;
+  }
+  
+  #stil-video::after {
+    position: absolute;
+    display: block;
+    content: " ";
+    width: 100%;
+    height: 21px;
+    box-shadow: 0px 0px 10px 5px var(--culoare-b2);
+  }
+  
+  video {
+    margin: 0;
+    padding: 0;
+    /*-webkit-transform: translateZ(0);*/
+    transition: all 0.2s linear;
+    width: 100%;
+    border-radius: 10px;
+    height: auto;
+  }

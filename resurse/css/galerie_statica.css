@@ -1,0 +1,135 @@
+@charset "UTF-8";
+/*galeria statica pe ecran mare*/
+#galerie-statica {
+  padding-left: var(--padding-intern);
+  padding-right: var(--padding-intern);
+}
+
+#grid-galerie {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-row-gap: 0.5em;
+  grid-column-gap: 0.5em;
+  counter-reset: nrimag 3;
+  scale: 1;
+}
+
+#grid-galerie img {
+  width: 100%;
+  /* Imaginele ocupa intreaga latime a elementului grid */
+  height: auto;
+  /* Inaltimea se adapteaza proportional la latime */
+  border: none;
+  /*sa nu aiba border*/
+}
+
+#grid-galerie figcaption {
+  /* Stilizare pentru textul de sub imagine */
+  text-align: center;
+  counter-increment: nrimag 2;
+  color: var(--cul-h2)
+}
+
+#grid-galerie > figure:nth-child(1) {
+  grid-area: 1/1/1/2;
+}
+
+#grid-galerie > figure:nth-child(2) {
+  grid-area: 1/2/1/3;
+}
+
+#grid-galerie > figure:nth-child(3) {
+  grid-area: 1/3/1/4;
+}
+
+#grid-galerie > figure:nth-child(4) {
+  grid-area: 1/4/1/5;
+}
+
+#grid-galerie > figure:nth-child(5) {
+  grid-area: 2/1/2/2;
+}
+
+#grid-galerie > figure:nth-child(6) {
+  grid-area: 2/4/2/5;
+}
+
+#grid-galerie > figure:nth-child(7) {
+  grid-area: 3/1/3/2;
+}
+
+#grid-galerie > figure:nth-child(8) {
+  grid-area: 3/2/3/3;
+}
+
+#grid-galerie > figure:nth-child(9) {
+  grid-area: 3/3/3/4;
+}
+
+#grid-galerie > figure:nth-child(10) {
+  grid-area: 3/4/3/5;
+}
+
+#grid-galerie figcaption::before {
+  content: counter(nrimag, lower-alpha) ". ";
+}
+
+/* Tranzitie galerie statica */
+#grid-galerie figure:hover {
+  transform: translateY(-15%) scale(1.3); /* Translatare si marire*/
+  border-width: 4px;
+  border-color: var(--culoare4);
+  border-style: dashed;
+}
+
+#grid-galerie figure {
+  transition: transform 1.25s ease, border 0.5s ease;
+}
+
+#grid-galerie figure:hover figcaption {
+  background-color: var(--culoare-sageata); 
+  color: var(--culoare-meniu); 
+}
+
+/*galerie statica pe ecran mediu*/
+@media screen and (max-width: 1000px) and (min-width: 500px) {
+  #grid-galerie {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  #grid-galerie > figure:nth-child(1) {
+    grid-area: auto;
+  }
+  #grid-galerie > figure:nth-child(2) {
+    grid-area: auto;
+  }
+  #grid-galerie > figure:nth-child(3) {
+    grid-area: auto;
+  }
+  #grid-galerie > figure:nth-child(4) {
+    grid-area: auto;
+  }
+  #grid-galerie > figure:nth-child(5) {
+    grid-area: auto;
+  }
+  #grid-galerie > figure:nth-child(6) {
+    grid-area: auto;
+  }
+  #grid-galerie > figure:nth-child(7) {
+    grid-area: auto;
+  }
+  #grid-galerie > figure:nth-child(8) {
+    grid-area: auto;
+  }
+  #grid-galerie > figure:nth-child(9) {
+    grid-area: auto;
+  }
+  #grid-galerie > figure:nth-child(10) {
+    grid-area: auto;
+  }
+}
+/*galerie statica pe ecran mic*/
+@media screen and (max-width: 500px) {
+  #grid-galerie {
+    display: block;
+  }
+}
